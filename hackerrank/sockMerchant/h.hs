@@ -13,7 +13,7 @@ import System.Environment
 import System.IO
 import System.IO.Unsafe
 
-import qualified Data.HashSet as hamt
+import qualified Data.HashSet as Hamt
 
 -- Complete the sockMerchant function below.
 {-
@@ -72,15 +72,16 @@ Finally, my choice is to use the HashSet:
 https://hackage.haskell.org/package/unordered-containers-0.2.10.0/docs/Data-HashSet.html
 
 -}
-sockMerchant n ar = countPairs ar []
+sockMerchant n ar = countPairs ar Hamt.empty
 
+-- Test putting hamt.empty as the second argument
 countPairs [] _ = 0
-countPairs (x:xs) ht
-    | x `elem` ht = 1 + countPairs xs htWithoutX
-    | otherwise = countPairs xs htWithX
+countPairs (x:xs) hs
+    | Hamt.member x hs = 1 + countPairs xs hsWithoutX
+    | otherwise = countPairs xs hsWithX
     where
-        htWithoutX = Data.List.delete x ht
-        htWithX = x : ht
+        hsWithoutX = Hamt.delete x hs
+        hsWithX = Hamt.insert x hs
 
 
 main :: IO()
