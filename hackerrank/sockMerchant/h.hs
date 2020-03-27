@@ -1,19 +1,25 @@
-{-# LANGUAGE FlexibleInstances, UndecidableInstances, DuplicateRecordFields #-}
-
-module Main where
-
-import Control.Monad
-import Data.Array
-import Data.Bits
 import Data.List
-import Data.List.Split
-import Data.Set
-import Debug.Trace
-import System.Environment
-import System.IO
-import System.IO.Unsafe
-
 import qualified Data.HashSet as Hamt
+
+main = interact $ show . solve . map read . tail . words
+
+solve ar = countPairs ar Hamt.empty
+
+countPairs [] _ = 0
+countPairs (x:xs) hs
+    | Hamt.member x hs = 1 + countPairs xs hsWithoutX
+    | otherwise = countPairs xs hsWithX
+    where
+        hsWithoutX = Hamt.delete x hs
+        hsWithX = Hamt.insert x hs
+
+{-
+main = do
+    n <- getLine
+    ar <- getLine
+    let out = solve . map (\s -> read s :: Int) . words $ ar
+    print out
+-}
 
 -- Complete the sockMerchant function below.
 {-
@@ -71,56 +77,4 @@ Randomized algorithm.
 Finally, my choice is to use the HashSet:
 https://hackage.haskell.org/package/unordered-containers-0.2.10.0/docs/Data-HashSet.html
 
--}
-sockMerchant n ar = countPairs ar Hamt.empty
-
--- Test putting hamt.empty as the second argument
-countPairs [] _ = 0
-countPairs (x:xs) hs
-    | Hamt.member x hs = 1 + countPairs xs hsWithoutX
-    | otherwise = countPairs xs hsWithX
-    where
-        hsWithoutX = Hamt.delete x hs
-        hsWithX = Hamt.insert x hs
-
-
-main :: IO()
-main = do
-    n <- readLn :: IO Int
-
-    arTemp <- getLine
-
-    let ar = Data.List.map (read :: String -> Int) . words $ arTemp
-
-    let result = sockMerchant n ar
-
-    putStrLn $ show result
-
-{-
-
-readMultipleLinesAsStringArray :: Int -> IO [String]
-readMultipleLinesAsStringArray 0 = return []
-readMultipleLinesAsStringArray n = do
-    line <- getLine
-    rest <- readMultipleLinesAsStringArray(n - 1)
-    return (line : rest)
-
-main :: IO()
-main = do
-    stdout <- getEnv "OUTPUT_PATH"
-    fptr <- openFile stdout WriteMode
-
-    n <- readLn :: IO Int
-
-    arTemp <- getLine
-
-    let ar = Data.List.map (read :: String -> Int) . words $ arTemp
-
-    let result = sockMerchant n ar
-
-    hPutStrLn fptr $ show result
-    -- putStrLn $ show result
-
-    hFlush fptr
-    hClose fptr
 -}
