@@ -1,7 +1,7 @@
 import Data.List
 import qualified Data.HashSet as Hamt
 
-main = interact $ show . solve . map read . tail . words
+main = interact $ show . solve . map (\x -> read x :: Int) . tail . words
 
 solve ar = countPairs ar Hamt.empty
 
