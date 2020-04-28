@@ -64,7 +64,7 @@ int main(){
     factRD(n);
     auto stop = chrono::high_resolution_clock::now();
     auto duration = chrono::duration_cast<chrono::microseconds>(stop - start);
-    printf("factRD: %ld\n", duration.count());
+    printf("factRD: %ld microseconds\n", duration.count());
     //std::chrono::duration<double> diff = stop-start;
     //printf("%lf\n", diff.count());
 
@@ -73,19 +73,19 @@ int main(){
     factID(n);
     stop = chrono::high_resolution_clock::now();
     duration = chrono::duration_cast<chrono::microseconds>(stop - start);
-    printf("factID: %ld\n", duration.count());
+    printf("factID: %ld microseconds\n", duration.count());
 
     start = chrono::high_resolution_clock::now();
     factIA(n);
     stop = chrono::high_resolution_clock::now();
     duration = chrono::duration_cast<chrono::microseconds>(stop - start);
-    printf("factAI: %ld\n", duration.count());
+    printf("factAI: %ld microseconds\n", duration.count());
 
     start = chrono::high_resolution_clock::now();
     factIDS(n);
     stop = chrono::high_resolution_clock::now();
     duration = chrono::duration_cast<chrono::microseconds>(stop - start);
-    printf("factIDS: %ld\n", duration.count());
+    printf("factIDS: %ld microseconds\n", duration.count());
 
     /*
     printf("%d\n", factRD(n));
