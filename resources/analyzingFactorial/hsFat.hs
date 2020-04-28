@@ -1,3 +1,12 @@
+{-
+To generate benchmark chart execute in the terminal:
+    ghc -O --make hsFat
+    ./hsFat --output hsResults.html
+
+Criterion tutorial:
+http://www.serpentine.com/criterion/tutorial.html
+-}
+
 -- import Criterion.Measurement as CM
 import Criterion.Main
 -- import System.TimeIt
