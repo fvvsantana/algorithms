@@ -8,16 +8,17 @@
 * Uniquely represent a solution. e.g.: [rowId, colId]
 * Formalize your space of search. e.g.: a matrix N*N.
 * Find the brute force algorithm. (get complexity in time and space).
+* Understand:
+    * How to build a solution
+    * How to verify that a solution is the best.
 * Identify duplicated/non-optimized computations.
+* Identify relationships among solutions.
 * Come with a bottom-up solution, or divide-and-conquer.
-* Create laws like:
-    * If there isn't repeated characters in a string, then there isn't in a substring.
-    * If I computed that, I get the results of all of these sub problems.
-* These laws would help you to identify non-optimizations.
+
+
 
 * Tips:
  * Use hash table.
- *
 
 # Building a solution:
 * Represent the solution.
@@ -26,5 +27,26 @@
     * Think recursively.
 
 
-# General tips
-* The size of a hash table depends not only on how many things you put inside of it, but depends on the size of the "alphabet" of keys. The number of possible values for keys also determines the size of the hash table. So be careful with Sets, Maps and HashStuff.
+# Space complexity tips
+* Size of hash table: O(max(m+n))
+    * m: number of keys inserted.
+    * n: number of possible values that a key can have. (alphabet).
+    * Affects HashSets and HashMaps.
+
+# To find laws
+* See in the matrix what are the relationships among solutions
+    * Union
+    * Intersection
+    * Concatenation
+    * Difference
+    * One solution containing another
+    * Complement
+    * Order
+* Given these relationships, check if there are any laws that involve these relationships:
+    * Substring and containance about repeated characters.
+
+# Important laws
+## Repeated characters on string
+    * If a string doesn't have any repeated characters, then a substring won't have repeated characters.
+## Median
+    * Definition: number of greater elements and number of smaller elements are equal.
