@@ -19,6 +19,7 @@
 
 * Tips:
  * Use hash table.
+ * Keep pseudo-code more pseudo.
 
 # Building a solution:
 * Represent the solution.
