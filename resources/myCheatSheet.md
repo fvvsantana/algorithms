@@ -17,8 +17,12 @@
 
 
 
-* Tips:
- * Use hash table.
+* Tips for finding solution:
+    * Use hash table.
+* Tips for coding:
+    * Use swap to reuse code. (problem 4-Median-of-Two-Sorted-Arrays).
+    * When a variable have a complex meaning, write it down on comment.
+    * The index i means how many elements there are before it.
 
 # Building a solution:
 * Represent the solution.
