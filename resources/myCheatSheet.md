@@ -43,7 +43,7 @@
     * Intersection
     * Concatenation
     * Difference
-    * One solution containing another
+    * Containment
     * Complement
     * Order
 * Given these relationships, check if there are any laws that involve these relationships:
@@ -51,6 +51,21 @@
 
 # Important laws
 ## Repeated characters on string
-    * If a string doesn't have any repeated characters, then a substring won't have repeated characters.
+    * If a string doesn't have any repeated characters, then a substring won't have any repeated characters.
 ## Median
     * Definition: number of greater elements and number of smaller elements are equal.
+## Palindromes
+    Two important relationships:
+    1) (Containment + same symmetry axis) between two palindromes:
+          |-A-|    
+        a b a b a
+        |---B---|  
+        You can use A to calculate B, expanding from A.
+    2) (Containment + different symmetry axes) among three palindromes:
+        |-A-|   |-B-|
+        a b a b a b a
+        |-----C-----|
+        Given the long palindrome C, a palindrome A contained in C will always have a symmetric palindrome B, also contained in C.
+
+    Manacher's algorithm uses these relationships, uses a LPSL array (Longest Palindromic Sub-string Length array) to find the longest palindromic sub-string of a given string.
+    The use of separation bars in this algorithm allows treating every symmetry axis as centered in a character.
