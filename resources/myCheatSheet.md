@@ -32,10 +32,10 @@
 
 
 # Space complexity tips
-* Size of hash table: O(max(m+n))
-    * m: number of keys inserted.
-    * n: number of possible values that a key can have. (alphabet).
-    * Affects HashSets and HashMaps.
+* Always consider the initial string for space complexity. In this way, you can implement whatever O(n) solution without worrying about space
+
+# Data structures tips:
+* When you want to use an array of characters, or a linked list of characters, sometimes it's better to use a string.
 
 # To find laws
 * See in the matrix what are the relationships among solutions
