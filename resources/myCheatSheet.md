@@ -36,6 +36,7 @@
 
 # Data structures tips:
 * When you want to use an array of characters, or a linked list of characters, sometimes it's better to use a string.
+* When there is overflow involved, try to use a bigger datatype.
 
 # To find laws
 * See in the matrix what are the relationships among solutions
