@@ -37,7 +37,10 @@
 # Data structures tips:
 * When you want to use an array of characters, or a linked list of characters, sometimes it's better to use a string.
 * When there is overflow involved, try to use a bigger datatype.
-* If you want to extract the digits of a number, use strings (or maybe not).
+* Sometimes you can use strings to take the digits of any number.
+* Bitmasks: create values and masks using the hexadecimal notation 0xFFFF, use bitwise operations like &, |, ^, ~, <<, >>, etc.
+
+
 
 # To find laws
 * See in the matrix what are the relationships among solutions
