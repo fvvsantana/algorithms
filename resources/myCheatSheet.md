@@ -23,6 +23,9 @@
     * Use swap to reuse code. (problem 4-Median-of-Two-Sorted-Arrays).
     * When a variable have a complex meaning, write it down on comment.
     * The index i means how many elements there are before it.
+    State machine:
+    * When you have a loop that changes the state multiple times, you could use a state machine.
+    * If a state happens once and then finishes, try to avoid putting it into the state machine.
 
 # Building a solution:
 * Represent the solution.
