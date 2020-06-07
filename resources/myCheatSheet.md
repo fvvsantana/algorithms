@@ -3,6 +3,7 @@
 * Try to classify the problem: (the main part of the challenge)
     * Search for solution. (The solution is a secret)
     * Building a solution. (the solution is not a secret, the problem is to make an algorithm to create a solution.)
+    * Table testing
 
 # For search problems:
 * Uniquely represent a solution. e.g.: [rowId, colId]
@@ -14,6 +15,8 @@
 * Identify duplicated/non-optimized computations.
 * Identify relationships among solutions.
 * Come with a bottom-up solution, or divide-and-conquer.
+* Table testing
+    (Spend some time after getting the solution to do some table testing and get more used to your algorithm. This will help you to implement it after.)
 
 
 
