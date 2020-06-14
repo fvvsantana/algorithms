@@ -33,6 +33,8 @@
 # Building a solution:
 * Represent the solution.
 * Find the algorithm to build the solution.
+* Try to use data structures.
+* Try to find unnecessary information you computed.
 * Tips:
     * Think recursively.
 
