@@ -29,6 +29,11 @@
     State machine:
     * When you have a loop that changes the state multiple times, you could use a state machine.
     * If a state happens once and then finishes, try to avoid putting it into the state machine.
+* Tips for dynamic programming:
+    * Play around with some examples understand the algorithm.
+    * See that the number of solutions is exponential, analyze the brute force solution.
+    * Define the solution recursively.
+    * On dynamic programming, try to use indices of arrays instead of its elements when formulating the recurrence.
 
 # Building a solution:
 * Represent the solution.
