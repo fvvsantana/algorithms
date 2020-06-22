@@ -38,7 +38,7 @@ public:
 /*
 Reading: 5 minutes
 Solving: 14:00 - 14:35
-Coding recursive version: 14:38 -
+Coding recursive version: 14:38 - 14:55
 
 Sorted:
 2 3 5 7 9 10 18 101
