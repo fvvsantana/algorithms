@@ -87,3 +87,6 @@
 
     Manacher's algorithm uses these relationships, uses a LPSL array (Longest Palindromic Sub-string Length array) to find the longest palindromic sub-string of a given string.
     The use of separation bars in this algorithm allows treating every symmetry axis as centered in a character.
+## The way that the longest increasing subsequence works
+    See the O(nlogn) solution: https://leetcode.com/problems/longest-increasing-subsequence/solution/
+    
