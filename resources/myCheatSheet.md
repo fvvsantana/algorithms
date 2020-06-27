@@ -34,6 +34,8 @@
     * See that the number of solutions is exponential, analyze the brute force solution.
     * Define the solution recursively.
     * On dynamic programming, try to use indices of arrays instead of its elements when formulating the recurrence.
+* Tips for backtracking:
+    * Think recursively.
 
 # Building a solution:
 * Represent the solution.
@@ -89,4 +91,3 @@
     The use of separation bars in this algorithm allows treating every symmetry axis as centered in a character.
 ## The way that the longest increasing subsequence works
     See the O(nlogn) solution: https://leetcode.com/problems/longest-increasing-subsequence/solution/
-    
