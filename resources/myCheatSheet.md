@@ -54,6 +54,7 @@
 * When there is overflow involved, try to use a bigger datatype.
 * Sometimes you can use strings to take the digits of any number.
 * Bitmasks: create values and masks using the hexadecimal notation 0xFFFF, use bitwise operations like &, |, ^, ~, <<, >>, etc.
+* I avoided using sets in the "46-Permutations" by swapping elements in the array. Also, looped recursively through the given array, instead of looping through the permutations (answers).
 
 
 
