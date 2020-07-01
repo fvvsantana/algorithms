@@ -144,8 +144,10 @@ array of predecessors:
 
 []
 
+Arrange n target/minCand = n!/ (n-target/minCand)!
 Complexity:
-Time: O( target/minCand )
-Space:
+Time: O( n!/ (n-target/minCand)!)
+Space: O(min(target/minCand, n))
+
 
 */
