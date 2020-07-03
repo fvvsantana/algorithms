@@ -124,8 +124,9 @@ list<index, amount>
 
 while(!list.empty())
 Complexity:
-Time: O()
-Space:
+m = target/(min.candidates)
+Time: O(m * n^m), average(n^m)
+Space: O(max(m, n))
 
 
 */
