@@ -94,3 +94,8 @@
     The use of separation bars in this algorithm allows treating every symmetry axis as centered in a character.
 ## The way that the longest increasing subsequence works
     See the O(nlogn) solution: https://leetcode.com/problems/longest-increasing-subsequence/solution/
+
+# Why heap has insertion O(1)
+Average number of steps in insertion = 1*1/2 + 2 * 1/4 + 3 * 1/8 + 4 * 1/16 ... = sum(n/2^n) = constant value.
+sum(n/2^n) converges absolutely, this is verifiable using the convergence ratio test.
+Deletion is O(log n) though
