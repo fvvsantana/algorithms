@@ -99,3 +99,6 @@
 Average number of steps in insertion = 1*1/2 + 2 * 1/4 + 3 * 1/8 + 4 * 1/16 ... = sum(n/2^n) = constant value.
 sum(n/2^n) converges absolutely, this is verifiable using the convergence ratio test.
 Deletion is O(log n) though
+
+# Heap tip (Kth Largest Element in a Stream)
+For getting the Kth Largest Element in a Stream, you can use heap, given the constraints. Adding and deleting elements is possible using 1 or 2 heaps. But at the same time, accessing the Jth and the Kth largest elements in a stream, it's better using a tree with all elements.
