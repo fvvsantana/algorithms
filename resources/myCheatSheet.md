@@ -33,7 +33,7 @@
     * Never forget, stl.end() is not the last element;
     * Non hashable objects cannot be used as keys to maps and sets.
 * Tips for dynamic programming:
-    * Play around with some examples understand the algorithm.
+    * Play around with some examples to understand the algorithm.
     * See that the number of solutions is exponential, analyze the brute force solution.
     * Define the solution recursively.
     * On dynamic programming, try to use indices of arrays instead of its elements when formulating the recurrence.
