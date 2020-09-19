@@ -31,6 +31,7 @@
     * If a state happens once and then finishes, try to avoid putting it into the state machine.
     * If you don't know what is the condition of the while, put some condition anyway, then build your code using that condition as a premise. (much more clean code doing this way)
     * Never forget, stl.end() is not the last element;
+    * Non hashable objects cannot be used as keys to maps and sets.
 * Tips for dynamic programming:
     * Play around with some examples understand the algorithm.
     * See that the number of solutions is exponential, analyze the brute force solution.
